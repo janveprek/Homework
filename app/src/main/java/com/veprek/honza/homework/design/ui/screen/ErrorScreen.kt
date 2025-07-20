@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import com.veprek.honza.homework.R
+import com.veprek.honza.homework.design.ui.theme.HomeworkTheme
 
 
 @Composable
@@ -23,7 +23,7 @@ fun ErrorScreen(
         modifier = modifier
             .fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(
-            20.dp,
+            HomeworkTheme.dimensions.spacingLarge,
             Alignment.CenterVertically
         ),
         horizontalAlignment = Alignment.CenterHorizontally,

@@ -27,12 +27,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import com.veprek.honza.homework.R
 import com.veprek.honza.homework.accountdetail.presentation.TransparentAccountDetailViewModel
 import com.veprek.honza.homework.core.presentation.UiStatus
 import com.veprek.honza.homework.design.ui.screen.ErrorScreen
 import com.veprek.honza.homework.design.ui.screen.LoadingScreen
+import com.veprek.honza.homework.design.ui.theme.HomeworkTheme
 import org.koin.compose.viewmodel.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -78,21 +78,21 @@ internal fun TransparentAccountDetailScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(paddingValues)
-                        .padding(horizontal = 16.dp),
-                    contentPadding = PaddingValues(vertical = 4.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(horizontal = HomeworkTheme.dimensions.spacingLarge),
+                    contentPadding = PaddingValues(vertical = HomeworkTheme.dimensions.spacingSmall),
+                    verticalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingLarge)
                 ) {
                     item {
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .shadow(elevation = 8.dp)
+                                .shadow(elevation = HomeworkTheme.dimensions.shadowHeight)
                         ) {
                             Column(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(20.dp),
-                                verticalArrangement = Arrangement.spacedBy(16.dp)
+                                    .padding(HomeworkTheme.dimensions.spacingExtraLarge),
+                                verticalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingLarge)
                             ) {
                                 DetailRow(
                                     label = stringResource(R.string.detail_account_number),

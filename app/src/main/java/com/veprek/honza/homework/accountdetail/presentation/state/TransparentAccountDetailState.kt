@@ -1,4 +1,4 @@
-package com.veprek.honza.homework.accountdetail.ui
+package com.veprek.honza.homework.accountdetail.presentation.state
 
 internal data class TransparentAccountDetailState(
     val accountNumber: String,

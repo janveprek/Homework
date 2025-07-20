@@ -15,12 +15,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import com.veprek.honza.homework.R
 import com.veprek.honza.homework.account.presentation.TransparentAccountsViewModel
 import com.veprek.honza.homework.core.presentation.UiStatus
 import com.veprek.honza.homework.design.ui.screen.ErrorScreen
 import com.veprek.honza.homework.design.ui.screen.LoadingScreen
+import com.veprek.honza.homework.design.ui.theme.HomeworkTheme
 import org.koin.compose.viewmodel.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -58,9 +58,9 @@ internal fun TransparentAccountsScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(paddingValues)
-                        .padding(all = 8.dp),
-                    contentPadding = PaddingValues(vertical = 8.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(all = HomeworkTheme.dimensions.spacingMedium),
+                    contentPadding = PaddingValues(vertical = HomeworkTheme.dimensions.spacingMedium),
+                    verticalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingLarge)
                 ) {
                     items(uiState.accounts) { account ->
                         AccountItem(

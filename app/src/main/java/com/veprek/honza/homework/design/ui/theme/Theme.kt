@@ -5,6 +5,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 
 private val lightScheme = lightColorScheme(
     primary = primaryLight,
@@ -92,10 +93,20 @@ fun HomeworkTheme(
     } else {
         lightScheme
     }
+    CompositionLocalProvider(
+        LocalThemeDimensions provides Dimensions()
+    ) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = AppTypography,
+            content = content
+        )
+    }
+}
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = AppTypography,
-        content = content
-    )
+
+object HomeworkTheme {
+    val dimensions: Dimensions
+        @Composable
+        get() = LocalThemeDimensions.current
 }

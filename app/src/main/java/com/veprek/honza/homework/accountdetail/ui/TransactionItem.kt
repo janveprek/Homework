@@ -15,9 +15,9 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import com.veprek.honza.homework.R
 import com.veprek.honza.homework.accountdetail.presentation.state.TransactionState
+import com.veprek.honza.homework.design.ui.theme.HomeworkTheme
 
 @Composable
 internal fun TransactionItem(
@@ -27,14 +27,14 @@ internal fun TransactionItem(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(4.dp)
-            .shadow(elevation = 8.dp),
+            .padding(HomeworkTheme.dimensions.spacingSmall)
+            .shadow(elevation = HomeworkTheme.dimensions.shadowHeight),
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(8.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+                .padding(HomeworkTheme.dimensions.spacingMedium),
+            verticalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingSmall)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -67,7 +67,7 @@ internal fun TransactionItem(
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
+                horizontalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingLarge)
             ) {
                 transaction.senderAccountNumber?.let { sender ->
                     Column(modifier = Modifier.weight(1f)) {

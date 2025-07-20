@@ -1,6 +1,5 @@
 package com.veprek.honza.homework.accountdetail.presentation.state
 
-import com.veprek.honza.homework.accountdetail.ui.TransparentAccountDetailState
 import com.veprek.honza.homework.core.presentation.UiStatus
 
 internal data class TransparentAccountDetailScreenState(

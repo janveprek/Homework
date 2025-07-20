@@ -2,7 +2,7 @@ package com.veprek.honza.homework.accountdetail.presentation.mapper
 
 import com.veprek.honza.homework.accountdetail.presentation.state.TransparentAccountDetailScreenState
 import com.veprek.honza.homework.accountdetail.presentation.state.ViewModelState
-import com.veprek.honza.homework.accountdetail.ui.TransparentAccountDetailState
+import com.veprek.honza.homework.accountdetail.presentation.state.TransparentAccountDetailState
 
 internal fun ViewModelState.toUiState(): TransparentAccountDetailScreenState {
     return TransparentAccountDetailScreenState(

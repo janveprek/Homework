@@ -7,6 +7,9 @@ import kotlinx.datetime.format
 import kotlinx.datetime.format.Padding
 import kotlinx.datetime.format.char
 
+/**
+ * Formats Local date time to format d.M. yyyy H:mm
+ */
 fun LocalDateTime.toFormattedUiDate(): String {
     val dateFormat = LocalDate.Format {
         day(padding = Padding.NONE)

@@ -15,10 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import com.veprek.honza.homework.account.presentation.state.TransparentAccountItemState
+import com.veprek.honza.homework.design.ui.theme.HomeworkTheme
 
-// TODO: Use theme dimensions
 @Composable
 internal fun AccountItem(
     account: TransparentAccountItemState,
@@ -28,9 +27,9 @@ internal fun AccountItem(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(4.dp) // Add padding to prevent shadow clipping
+            .padding(HomeworkTheme.dimensions.spacingSmall)
             .shadow(
-                elevation = 8.dp,
+                elevation = HomeworkTheme.dimensions.shadowHeight,
             )
             .clickable(onClick = onClick),
     ) {
@@ -38,15 +37,15 @@ internal fun AccountItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(
-                    horizontal = 16.dp,
-                    vertical = 12.dp
+                    horizontal = HomeworkTheme.dimensions.spacingLarge,
+                    vertical = HomeworkTheme.dimensions.spacingMediumLarge
                 ),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingLarge),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
+                verticalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingMedium)
             ) {
                 Text(
                     text = account.name,

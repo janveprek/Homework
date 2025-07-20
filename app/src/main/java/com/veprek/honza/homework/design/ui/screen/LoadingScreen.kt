@@ -10,10 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-
-private val loadingIndicatorStrokeWidth = 4.dp
-private val loadingIndicatorSize = 64.dp
+import com.veprek.honza.homework.design.ui.theme.HomeworkTheme
 
 @Composable
 fun LoadingScreen(
@@ -26,9 +23,9 @@ fun LoadingScreen(
         verticalArrangement = Arrangement.Center
     ) {
         CircularProgressIndicator(
-            modifier = Modifier.size(loadingIndicatorSize),
+            modifier = Modifier.size(HomeworkTheme.dimensions.loadingIndicatorSize),
             color = MaterialTheme.colorScheme.primary,
-            strokeWidth = loadingIndicatorStrokeWidth
+            strokeWidth = HomeworkTheme.dimensions.loadingIndicatorStrokeWidth
         )
     }
 }
