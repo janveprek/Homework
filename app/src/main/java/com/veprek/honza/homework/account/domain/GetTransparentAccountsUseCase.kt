@@ -9,7 +9,7 @@ internal interface GetTransparentAccountsUseCase {
     suspend operator fun invoke(request: TransparentAccountsRequest): DataResult<PagingListResult<TransparentAccount>>
 }
 
-class GetTransparentAccountsUseCaseImpl(
+internal class GetTransparentAccountsUseCaseImpl(
     private val repository: AccountRepository
 ): GetTransparentAccountsUseCase {
     override suspend operator fun invoke(

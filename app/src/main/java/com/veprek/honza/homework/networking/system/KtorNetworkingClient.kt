@@ -1,12 +1,12 @@
 package com.veprek.honza.homework.networking.system
 
-import com.veprek.honza.homework.networking.Environment
+import com.veprek.honza.homework.networking.model.Environment
 import io.ktor.client.HttpClient
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
 
-class KtorNetworkingClient(
+internal class KtorNetworkingClient(
     private val httpClient: HttpClient
 ) : NetworkingClient {
     override suspend fun get(

@@ -1,4 +1,4 @@
-package com.veprek.honza.homework
+package com.veprek.honza.homework.core.system
 
 import android.app.Application
 import com.veprek.honza.homework.core.di.appModules

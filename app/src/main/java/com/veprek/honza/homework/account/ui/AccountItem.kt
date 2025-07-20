@@ -16,8 +16,9 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.veprek.honza.homework.account.presentation.state.TransparentAccountItemState
 
-// TODO: Use theme dimensions and colors
+// TODO: Use theme dimensions
 @Composable
 internal fun AccountItem(
     account: TransparentAccountItemState,
@@ -27,6 +28,7 @@ internal fun AccountItem(
     Card(
         modifier = modifier
             .fillMaxWidth()
+            .padding(4.dp) // Add padding to prevent shadow clipping
             .shadow(
                 elevation = 8.dp,
             )
@@ -44,7 +46,7 @@ internal fun AccountItem(
         ) {
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
                     text = account.name,
@@ -56,11 +58,6 @@ internal fun AccountItem(
                 Text(
                     text = "${account.accountNumber}/${account.bankCode}",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = account.iban,
-                    style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }

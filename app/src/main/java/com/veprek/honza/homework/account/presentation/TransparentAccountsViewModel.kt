@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.veprek.honza.homework.account.domain.GetTransparentAccountsUseCase
 import com.veprek.honza.homework.account.model.TransparentAccountsRequest
+import com.veprek.honza.homework.account.presentation.mapper.toUiState
 import com.veprek.honza.homework.account.presentation.state.TransparentAccountsScreenState
 import com.veprek.honza.homework.account.presentation.state.ViewModelState
-import com.veprek.honza.homework.account.presentation.state.toUiState
 import com.veprek.honza.homework.core.model.handle
 import com.veprek.honza.homework.core.presentation.PagingStatus
 import com.veprek.honza.homework.core.presentation.UiStatus

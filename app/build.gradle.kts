@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.navigation.compose)
     implementation(libs.kotlinx.datetime)
     implementation(libs.ktor.client.okhttp)
     with(libs.ktor) {
@@ -64,6 +65,7 @@ dependencies {
     implementation(libs.koin.core)
     implementation(libs.koin.compose)
     implementation(libs.koin.compose.viewmodel)
+    implementation(libs.koin.compose.viewmodel.navigation)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class TransparentAccountsResponseDto(
+internal data class TransparentAccountsResponseDto(
     @SerialName("pageNumber")
     val pageNumber: Int,
     @SerialName("pageSize")
@@ -20,7 +20,7 @@ data class TransparentAccountsResponseDto(
 )
 
 @Serializable
-data class TransparentAccountDto(
+internal data class TransparentAccountDto(
     @SerialName("accountNumber")
     val accountNumber: String,
     @SerialName("bankCode")

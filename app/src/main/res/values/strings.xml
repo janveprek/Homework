@@ -3,4 +3,14 @@
     <!--  Stateful  -->
     <string name="error">Chyba při načítání dat</string>
     <string name="try_again">Zkusit znovu</string>
+
+    <!--  Account details  -->
+    <string name="detail_account_number">Číslo účtu</string>
+    <string name="detail_transactions">Transakce</string>
+    <string name="detail_iban">IBAN</string>
+    <string name="detail_balance">Zůstatek</string>
+    <string name="detail_actualization_date">Datum aktualizace</string>
+    <string name="from">Od:</string>
+    <string name="to">Pro:</string>
+    <string name="transparent_accounts">Transparentní účty</string>
 </resources>
