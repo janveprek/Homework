@@ -1,6 +1,6 @@
 package com.veprek.honza.homework.account.model
 
-private const val PER_PAGE = 25
+private const val PER_PAGE = 10
 
 data class TransparentAccountsRequest(
     val page: Int,

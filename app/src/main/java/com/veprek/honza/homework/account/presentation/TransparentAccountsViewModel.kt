@@ -32,6 +32,10 @@ internal class TransparentAccountsViewModel(
         loadFirstPage()
     }
 
+    fun tryAgain() {
+        loadFirstPage()
+    }
+
     private fun loadFirstPage() {
         viewModelScope.launch {
             changeState {
