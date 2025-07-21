@@ -69,74 +69,23 @@ internal fun TransactionItem(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(HomeworkTheme.dimensions.spacingLarge)
             ) {
-                transaction.senderAccountNumber?.let { sender ->
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = stringResource(R.string.from),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        Text(
-                            text = transaction.senderName ?: sender,
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Medium,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                        transaction.senderName?.let {
-                            Text(
-                                text = sender,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
-                        transaction.senderDescription?.let { description ->
-                            Text(
-                                text = description,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
-                    }
+                transaction.senderAccountNumber?.let { accountNumber ->
+                    AccountHolder(
+                        label = stringResource(R.string.from),
+                        accountNumber = accountNumber,
+                        name = transaction.senderName,
+                        description = transaction.senderDescription,
+                        modifier = Modifier.weight(1f)
+                    )
                 }
-
-                transaction.receiverAccountNumber?.let { receiver ->
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = stringResource(R.string.to),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        Text(
-                            text = transaction.receiverName ?: receiver,
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.Medium,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                        transaction.receiverName?.let {
-                            Text(
-                                text = receiver,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
-                        transaction.receiverDescription?.let { description ->
-                            Text(
-                                text = description,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
-                    }
+                transaction.receiverAccountNumber?.let { accountNumber ->
+                    AccountHolder(
+                        label = stringResource(R.string.to),
+                        accountNumber = accountNumber,
+                        name = transaction.receiverName,
+                        description = transaction.receiverDescription,
+                        modifier = Modifier.weight(1f)
+                    )
                 }
             }
         }

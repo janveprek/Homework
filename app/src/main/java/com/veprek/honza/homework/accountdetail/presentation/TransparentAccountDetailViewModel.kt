@@ -72,10 +72,10 @@ internal class TransparentAccountDetailViewModel(
                     }
 
                     transactionsResult.handle(
-                        onSuccess = { transactionsResponse ->
+                        onSuccess = { transactions ->
                             changeState {
                                 copy(
-                                    transactions = transactionsResponse.data.items,
+                                    transactions = transactions.data.items,
                                     pagingStatus = PagingStatus.Ready
                                 )
                             }
@@ -83,9 +83,7 @@ internal class TransparentAccountDetailViewModel(
                         onError = {
                             changeState {
                                 copy(
-                                    account = account.data,
                                     transactions = emptyList(),
-                                    uiStatus = UiStatus.Ready,
                                     pagingStatus = PagingStatus.Error,
                                 )
                             }
